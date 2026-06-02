@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 @theme {
-  --font-inter: 'Inter', sans-serif;
-  --font-outfit: 'Outfit', sans-serif;
-  
+  --font-inter: "Nunito", sans-serif;
+  --font-outfit: "Outfit", sans-serif;
+
   --color-dark: #0f1115;
   --color-primary: #34d399; /* Emerald 400 */
   --color-secondary: #94a3b8; /* Slate 400 */
