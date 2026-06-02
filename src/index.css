@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+  --font-inter: 'Inter', sans-serif;
+  --font-outfit: 'Outfit', sans-serif;
+  
+  --color-dark: #0f1115;
+  --color-primary: #34d399; /* Emerald 400 */
+  --color-secondary: #94a3b8; /* Slate 400 */
+}
+
+@layer base {
+  body {
+    @apply bg-dark text-slate-300 font-inter antialiased;
+  }
+}
+
+/* Custom Scrollbar for Marquee or general */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0f1115;
+}
+::-webkit-scrollbar-thumb {
+  background: #1f2937;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #374151;
+}
