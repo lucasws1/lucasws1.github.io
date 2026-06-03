@@ -4,9 +4,9 @@ export function Navbar() {
   const links = [
     { label: "Home", id: "hero" },
     { label: "About", id: "about" },
-    { label: "Experience", id: "experience" },
-    { label: "Formation", id: "formation" },
+    { label: "Skills", id: "skills" },
     { label: "Projects", id: "projects" },
+    { label: "Formation", id: "formation" },
     { label: "Contact", id: "contact" },
   ];
   const [active, setActive] = useState("hero");
@@ -30,10 +30,10 @@ export function Navbar() {
   }, []);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-dark/80 backdrop-blur-md border-b border-white/5">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-dark/80 backdrop-blur-md">
       <div className="w-full flex items-center justify-between py-5 px-8 max-w-7xl mx-auto">
         <div className="text-2xl font-bold font-outfit text-white tracking-tight">
-          Lucas <span className="text-primary">/</span>
+          Lucas Schuch<span className="text-primary">/</span>
         </div>
         <ul className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-400">
           {links.map(({ label, id }) => {

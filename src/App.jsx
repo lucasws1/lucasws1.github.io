@@ -1,9 +1,8 @@
-import React from "react";
 import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
 import { MarqueeBanner } from "./components/MarqueeBanner";
 import { About } from "./components/About";
-import { Experience } from "./components/Experience";
+import { Skills } from "./components/Skills";
 import { Formation } from "./components/Formation";
 import { Contact } from "./components/Contact";
 
@@ -16,7 +15,7 @@ function App() {
         <Hero />
         <MarqueeBanner />
         <About />
-        <Experience />
+        <Skills />
         <Formation />
         <Contact />
       </main>

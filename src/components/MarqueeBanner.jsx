@@ -1,7 +1,6 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 
-const MARQUEE_TEXT = "WEB / PROGRAMMING / DEVELOPMENT / JAVASCRIPT / CSS / FIGMA / GIT / HTML / ";
+const MARQUEE_TEXT = "WEB DEV / FULL STACK / JAVASCRIPT / HTML / CSS / REACT / NODEJS / EXPRESS.JS / NEXT.JS / GIT / FIGMA / TAILWIND / MARIADB / POSTGRESQL / MONGODB / LINUX / TYPESCRIPT / ";
 
 export function MarqueeBanner() {
   return (

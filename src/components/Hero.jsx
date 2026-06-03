@@ -28,7 +28,8 @@ export function Hero() {
       {/* Right side: Text Content */}
       <div className="flex flex-col items-start text-left">
         <h1 className="text-5xl md:text-6xl font-bold font-outfit text-white mb-2 tracking-tight leading-tight">
-          Olá, eu sou o<br />
+          Olá, eu sou o
+          <br />
           Lucas Schuch<span className="text-primary">.</span>
         </h1>
         <h2 className="text-3xl md:text-5xl font-bold font-outfit mb-8 bg-linear-to-r from-slate-400 to-slate-700 bg-clip-text text-transparent">

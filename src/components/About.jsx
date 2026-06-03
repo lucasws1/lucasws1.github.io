@@ -10,17 +10,20 @@ export function About() {
         About<span className="text-primary">.</span>
       </h2>
 
-      <div className="flex flex-col md:flex-row items-center gap-16 md:gap-24 w-full">
+      <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-20 w-full">
         {/* Left Side: Gradient Image Placeholder */}
-        <div className="relative w-64 h-64 md:w-80 md:h-80 shrink-0 mx-auto md:mx-0">
-          {/* Slanted Dark Background */}
-          <div className="absolute inset-0 bg-[#161a20] transform skew-x-12 translate-x-8"></div>
-          {/* Gradient Foreground */}
-          <div className="absolute inset-0 bg-linear-to-tr from-primary to-[#7dd3fc]"></div>
+        {/* <div className="relative w-64 h-64 md:w-80 md:h-80 shrink-0">
+          <div className="absolute rounded-lg inset-0 bg-linear-to-tr from-primary to-[#7dd3fc]"></div>
+        </div>*/}
+
+        {/* Middle: Slanted Dark Bar */}
+        <div className="flex gap-12">
+          <div className="hidden md:block w-14 h-64 bg-primary/15 skew-x-[-18deg] shrink-0"></div>
+          <div className="hidden md:block w-14 h-64 bg-primary/15 skew-x-[-18deg] shrink-0"></div>
         </div>
 
         {/* Right Side: Text */}
-        <div className="flex flex-col gap-6 text-slate-300 text-sm md:text-base leading-relaxed max-w-lg">
+        <div className="flex flex-col gap-6 text-slate-300 text-sm md:text-lg leading-relaxed max-w-lg">
           <p>
             <strong className="text-white font-medium">Web Developer</strong>{" "}
             transitioning to a career in technology.
