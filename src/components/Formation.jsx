@@ -3,24 +3,22 @@ import { FiArrowUpRight } from "react-icons/fi";
 const formations = [
   {
     id: 1,
-    date: "Jan 2021 - Aug 2021",
-    title: "Lorem | Ipsum",
+    date: "2026 - Presente",
+    title: "Curso Superior de Tec. em Análise e Desenv. de Sistemas",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin malesuada sodales finibus. Donec eget est nec nulla interdum facilisis. Praesent in tellus elementum, euismod quam id, vulputate lectus. Mauris rutrum risus ac mi feugiat gravida. Ut rhoncus libero finibus lorem finibus, vel laoreet nunc hendrerit. Integer nec elementum felis.",
+      "Curso em andamento em PUCRS - Universidade Pontifícia Católica do Rio Grande do Sul",
   },
   {
     id: 2,
-    date: "Jan 2022 - Dec 2022",
-    title: "Ipsum | Lorem",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin malesuada sodales finibus. Donec eget est nec nulla interdum facilisis. Praesent in tellus elementum, euismod quam id, vulputate lectus. Mauris rutrum risus ac mi feugiat gravida. Ut rhoncus libero finibus lorem finibus, vel laoreet nunc hendrerit.",
+    date: "2024 - 2026",
+    title: "Curso Técnico em Desenvolvimento de Sistemas",
+    description: "Diplomado em SENAC Tech - RS",
   },
   {
     id: 3,
-    date: "Aug 2019 - Dec 2020",
-    title: "Lorem Ipsum | Lorem Ipsum",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin malesuada sodales finibus. Donec eget est nec nulla interdum facilisis. Praesent in tellus elementum, euismod quam id, vulputate lectus. Mauris rutrum risus ac mi feugiat gravida. Ut rhoncus libero finibus lorem finibus, vel laoreet nunc hendrerit. Integer nec elementum felis.",
+    date: "2007 - 2013",
+    title: "Ciências Jurídicas e Sociais",
+    description: "Bacharel em Ciências Jurídicas e Sociais - PUCRS",
   },
 ];
 
@@ -42,7 +40,7 @@ export function Formation() {
           >
             {/* Date */}
             <div className="md:w-1/4 shrink-0 pt-1">
-              <span className="text-primary font-mono text-sm tracking-tighter whitespace-nowrap">
+              <span className="text-primary font-mono text-sm">
                 {formation.date}
               </span>
             </div>
@@ -53,7 +51,7 @@ export function Formation() {
                 {formation.title}
                 <FiArrowUpRight className="text-primary opacity-70" />
               </h3>
-              <p className="text-slate-400 text-sm leading-relaxed">
+              <p className="text-slate-400 text-sm font-medium leading-relaxed">
                 {formation.description}
               </p>
             </div>

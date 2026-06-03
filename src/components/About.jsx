@@ -1,5 +1,3 @@
-import React from "react";
-
 export function About() {
   return (
     <section
@@ -34,7 +32,7 @@ export function About() {
             <span className="text-white font-bold">
               Técnico em Desenvolvimento de Sistemas
             </span>{" "}
-            diplomado pelo Senac Tech, e atualmente estou cursando{" "}
+            diplomado pelo Senac Tech e atualmente estou cursando{" "}
             <span className="text-white font-bold">
               Curso Superior de Tecnologia em Análise e Desenvolvimento de
               Sistemas
