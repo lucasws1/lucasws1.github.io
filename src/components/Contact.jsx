@@ -1,34 +1,42 @@
-import React from 'react';
-import { FiLinkedin, FiGithub, FiInstagram, FiMail, FiArrowUpRight } from 'react-icons/fi';
+import {
+  FiLinkedin,
+  FiGithub,
+  FiInstagram,
+  FiMail,
+  FiArrowUpRight,
+} from "react-icons/fi";
 
 const links = [
   {
-    name: 'LinkedIn',
+    name: "LinkedIn",
     icon: <FiLinkedin className="text-xl" />,
-    url: '#',
+    url: "https://www.linkedin.com/in/lucasws1",
   },
   {
-    name: 'Instagram',
+    name: "Instagram",
     icon: <FiInstagram className="text-xl" />,
-    url: '#',
+    url: "https://www.instagram.com/lucaschuch/",
   },
   {
-    name: 'Github',
+    name: "GitHub",
     icon: <FiGithub className="text-xl" />,
-    url: '#',
+    url: "https://github.com/lucasws1",
   },
-  {
-    name: 'E-mail',
-    icon: <FiMail className="text-xl" />,
-    url: '#',
-  },
+  // {
+  //   name: "E-mail",
+  //   icon: <FiMail className="text-xl" />,
+  //   url: "#",
+  // },
 ];
 
 export function Contact() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <section id="contact" className="w-full max-w-4xl mx-auto px-8 pt-24 pb-12 flex flex-col items-center">
+    <section
+      id="contact"
+      className="w-full max-w-4xl mx-auto px-8 pt-24 pb-12 flex flex-col items-center"
+    >
       <h2 className="text-4xl md:text-5xl font-bold font-outfit text-white mb-4 text-center">
         Contact<span className="text-primary">.</span>
       </h2>
@@ -55,7 +63,7 @@ export function Contact() {
       </div>
 
       <footer className="text-slate-500 text-xs md:text-sm text-center">
-        &copy; {currentYear} | Lucas
+        &copy; {currentYear} | Lucas Schuch
       </footer>
     </section>
   );

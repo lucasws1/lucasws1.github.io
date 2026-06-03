@@ -5,6 +5,7 @@ import { About } from "./components/About";
 import { Formation } from "./components/Formation";
 import { Skills } from "./components/Skills";
 import { Contact } from "./components/Contact";
+import Projects from "./components/Projects";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <MarqueeBanner />
         <About />
         <Skills />
+        <Projects />
         <Formation />
         <Contact />
       </main>
