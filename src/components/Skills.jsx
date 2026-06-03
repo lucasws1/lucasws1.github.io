@@ -1,26 +1,59 @@
-import { FiArrowUpRight } from "react-icons/fi";
+import { FaHtml5, FaCss3Alt, FaJs } from "react-icons/fa";
+import { SiFigma } from "react-icons/si";
 
 const skills = [
   {
     id: 1,
-    date: "Jan 2021 - Aug 2021",
-    title: "Lorem | Ipsum",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin malesuada sodales finibus. Donec eget est nec nulla interdum facilisis. Praesent in tellus elementum, euismod quam id, vulputate lectus. Mauris rutrum risus ac mi feugiat gravida. Ut rhoncus libero finibus lorem finibus, vel laoreet nunc hendrerit. Integer nec elementum felis.",
+    title: "UI / UX Design",
+    platform: "Origamid",
+    hours: "72 hours",
+    icon: <SiFigma className="text-white text-2xl" />,
+    bgClass: "bg-purple-500",
   },
   {
     id: 2,
-    date: "Jan 2022 - Dec 2022",
-    title: "Ipsum | Lorem",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin malesuada sodales finibus. Donec eget est nec nulla interdum facilisis. Praesent in tellus elementum, euismod quam id, vulputate lectus. Mauris rutrum risus ac mi feugiat gravida. Ut rhoncus libero finibus lorem finibus, vel laoreet nunc hendrerit.",
+    title: "HTML & CSS",
+    platform: "Origamid",
+    hours: "46 hours",
+    icon: (
+      <div className="flex -space-x-2">
+        <FaHtml5 className="text-white text-2xl" />
+        <FaCss3Alt className="text-white text-2xl" />
+      </div>
+    ),
+    bgClass: "bg-orange-500", // We can use gradient or simple color
+    isDoubleIcon: true,
   },
   {
     id: 3,
-    date: "Aug 2019 - Dec 2020",
-    title: "Lorem Ipsum | Lorem Ipsum",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin malesuada sodales finibus. Donec eget est nec nulla interdum facilisis. Praesent in tellus elementum, euismod quam id, vulputate lectus. Mauris rutrum risus ac mi feugiat gravida. Ut rhoncus libero finibus lorem finibus, vel laoreet nunc hendrerit. Integer nec elementum felis.",
+    title: "CSS Flexbox & Grid",
+    platform: "Origamid",
+    hours: "12 hours",
+    icon: <FaCss3Alt className="text-white text-2xl" />,
+    bgClass: "bg-blue-500",
+  },
+  {
+    id: 4,
+    title: "JavaScript",
+    platform: "Origamid",
+    hours: "74 hours",
+    icon: <FaJs className="text-slate-900 text-3xl" />,
+    bgClass: "bg-yellow-400",
+  },
+  {
+    id: 5,
+    title: "Aprenda a Programar com JS, HTML e CSS",
+    platform: "Rodrigo Branas",
+    hours: "12 hours",
+    icon: (
+      <div className="flex -space-x-1">
+        <FaHtml5 className="text-white text-xl" />
+        <FaCss3Alt className="text-white text-xl" />
+        <FaJs className="text-slate-900 text-xl" />
+      </div>
+    ),
+    bgClass: "bg-orange-500", // Approximation
+    isTripleIcon: true,
   },
 ];
 
@@ -34,28 +67,28 @@ export function Skills() {
         Skills<span className="text-primary">.</span>
       </h2>
 
-      <div className="flex flex-col gap-12 w-full">
-        {skills.map((skill) => (
+      <div className="flex flex-col w-full">
+        {skills.map((skill, index) => (
           <div
             key={skill.id}
-            className="flex flex-col md:flex-row gap-4 md:gap-12 w-full group cursor-default"
+            className={`flex flex-col md:flex-row items-start md:items-center justify-between py-6 ${
+              index !== skills.length - 1 ? "border-b border-slate-800" : ""
+            }`}
           >
-            {/* Date */}
-            <div className="md:w-1/4 shrink-0 pt-1">
-              <span className="text-primary font-mono text-sm tracking-tighter whitespace-nowrap">
-                {skill.date}
-              </span>
+            {/* Left: Icon and Title */}
+            <div className="flex items-center gap-6 mb-4 md:mb-0">
+              <div
+                className={`w-14 h-14 rounded flex items-center justify-center flex-shrink-0 ${skill.bgClass}`}
+              >
+                {skill.icon}
+              </div>
+              <h3 className="text-white font-bold text-lg">{skill.title}</h3>
             </div>
 
-            {/* Content */}
-            <div className="md:w-3/4 flex flex-col gap-2">
-              <h3 className="text-white font-bold text-xl flex items-center gap-2 group-hover:text-primary transition-colors">
-                {skill.title}
-                <FiArrowUpRight className="text-primary opacity-70" />
-              </h3>
-              <p className="text-slate-400 text-sm leading-relaxed">
-                {skill.description}
-              </p>
+            {/* Right: Platform and Hours */}
+            <div className="flex items-center gap-4 text-sm text-slate-400 font-mono ml-20 md:ml-0">
+              <span>{skill.platform}</span>
+              <span>{skill.hours}</span>
             </div>
           </div>
         ))}

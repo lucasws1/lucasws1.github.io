@@ -2,8 +2,8 @@ import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
 import { MarqueeBanner } from "./components/MarqueeBanner";
 import { About } from "./components/About";
-import { Skills } from "./components/Skills";
 import { Formation } from "./components/Formation";
+import { Skills } from "./components/Skills";
 import { Contact } from "./components/Contact";
 
 function App() {

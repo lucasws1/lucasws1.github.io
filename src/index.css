@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --font-inter: "Nunito", sans-serif;
+  --font-sans: "Nunito", sans-serif;
   --font-outfit: "Outfit", sans-serif;
 
   --color-dark: #0f1115;
@@ -15,7 +15,7 @@
     scroll-padding-top: 5rem;
   }
   body {
-    @apply bg-dark text-slate-300 font-inter antialiased;
+    @apply bg-dark text-slate-300 font-outfit antialiased;
   }
 }
 
