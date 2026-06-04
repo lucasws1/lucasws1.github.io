@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { tsParticles } from "@tsparticles/engine";
 import { loadSlim } from "@tsparticles/slim";
 
-const isMobile = window.matchMedia("(pointer: coarse)").matches;
+// const isMobile = window.matchMedia("(pointer: coarse)").matches;
 
 let slimLoaded = false;
 
@@ -32,7 +32,7 @@ const particleOptions = {
 
 export default function ParticlesBg() {
   useEffect(() => {
-    if (isMobile) return;
+    // if (isMobile) return;
 
     let container;
 
@@ -54,7 +54,7 @@ export default function ParticlesBg() {
     };
   }, []);
 
-  if (isMobile) return null;
+  // if (isMobile) return null;
 
   return (
     <div
