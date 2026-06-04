@@ -1,6 +1,7 @@
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
-const MARQUEE_TEXT = "WEB DEV / FULL STACK / JAVASCRIPT / HTML / CSS / REACT / NODEJS / EXPRESS.JS / NEXT.JS / GIT / FIGMA / TAILWIND / MARIADB / POSTGRESQL / MONGODB / LINUX / TYPESCRIPT / ";
+const MARQUEE_TEXT =
+  "WEB DEV / FULL STACK / JAVASCRIPT / HTML / CSS / REACT / NODEJS / EXPRESS.JS / NEXT.JS / GIT / FIGMA / TAILWIND / MARIADB / POSTGRESQL / MONGODB / LINUX / TYPESCRIPT / ";
 
 export function MarqueeBanner() {
   return (
@@ -11,10 +12,9 @@ export function MarqueeBanner() {
         transition={{
           repeat: Infinity,
           ease: "linear",
-          duration: 15
+          duration: 15,
         }}
       >
-        {/* We repeat the text multiple times to ensure continuous scrolling */}
         {MARQUEE_TEXT.repeat(4)}
       </motion.div>
     </div>

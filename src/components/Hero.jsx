@@ -35,14 +35,14 @@ export function Hero() {
           <br />
           Lucas Schuch<span className="text-primary">.</span>
         </h1>
-        <h2 className="text-3xl md:text-5xl font-bold font-outfit mb-8 min-h-[1.2em] whitespace-nowrap">
+        <h2 className="text-3xl md:text-5xl font-bold font-outfit mb-8 min-h-[1.2em] tracking-tighter whitespace-nowrap">
           <TypeAnimation
             sequence={[
-              "Full Stack Developer",
+              "Desenvolvedor Full Stack",
               2000,
-              "React Developer",
+              "Desenvolvedor React",
               1500,
-              "Node.JS Developer",
+              "Desenvolvedor Node.js",
               1500,
             ]}
             wrapper="span"

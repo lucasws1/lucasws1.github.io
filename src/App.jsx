@@ -11,7 +11,6 @@ function App() {
   return (
     <div className="min-h-screen bg-dark overflow-x-hidden selection:bg-primary/80 selection:text-dark">
       <Navbar />
-
       <main className="w-full relative z-0 flex flex-col pb-0 pt-20">
         <Hero />
         <MarqueeBanner />
