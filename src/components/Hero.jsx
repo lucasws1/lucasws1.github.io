@@ -1,4 +1,3 @@
-import React from "react";
 import {
   FaHtml5,
   FaCss3Alt,
@@ -8,15 +7,19 @@ import {
   FaNodeJs,
 } from "react-icons/fa";
 import { SiTypescript } from "react-icons/si";
+import { TypeAnimation } from "react-type-animation";
+import ParticlesBg from "./ParticlesBg";
 
 export function Hero() {
   return (
     <section
       id="hero"
-      className="w-full min-h-[85vh] flex flex-col md:flex-row items-center justify-center max-w-5xl mx-auto px-8 gap-20"
+      className="relative w-full min-h-[85vh] flex flex-col md:flex-row items-center justify-center max-w-5xl mx-auto px-8 gap-20 overflow-hidden"
     >
+      <ParticlesBg />
+
       {/* Left side: Stylized frame */}
-      <div className="relative w-56 h-56 shrink-0">
+      <div className="relative z-10 w-56 h-56 shrink-0">
         <div className="absolute inset-0 border-2 border-primary"></div>
         <div className="absolute -bottom-7 -right-8 bg-dark pl-3 pr-1">
           <span className="text-primary text-5xl font-bold font-mono leading-none">
@@ -26,14 +29,28 @@ export function Hero() {
       </div>
 
       {/* Right side: Text Content */}
-      <div className="flex flex-col items-start text-left">
+      <div className="relative z-10 flex flex-col items-start text-left min-w-0 flex-1">
         <h1 className="text-5xl md:text-6xl font-bold font-outfit text-white mb-2 tracking-tight leading-tight">
           Olá, eu sou o
           <br />
           Lucas Schuch<span className="text-primary">.</span>
         </h1>
-        <h2 className="text-3xl md:text-5xl font-bold font-outfit mb-8 bg-linear-to-r from-slate-400 to-slate-700 bg-clip-text text-transparent">
-          Desenvolvedor Full Stack
+        <h2 className="text-3xl md:text-5xl font-bold font-outfit mb-8 min-h-[1.2em] whitespace-nowrap">
+          <TypeAnimation
+            sequence={[
+              "Full Stack Developer",
+              2000,
+              "React Developer",
+              1500,
+              "Node.JS Developer",
+              1500,
+            ]}
+            wrapper="span"
+            speed={50}
+            deletingSpeed={70}
+            repeat={Infinity}
+            className="bg-linear-to-r from-slate-400 to-slate-700 bg-clip-text text-transparent"
+          />
         </h2>
 
         {/* Tech Icons */}

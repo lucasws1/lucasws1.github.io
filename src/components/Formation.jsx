@@ -1,4 +1,5 @@
 import { FiArrowUpRight } from "react-icons/fi";
+import FadeIn from "./FadeIn";
 
 const formations = [
   {
@@ -28,34 +29,35 @@ export function Formation() {
       id="formation"
       className="w-full max-w-4xl mx-auto px-8 py-24 flex flex-col items-center"
     >
-      <h2 className="text-4xl md:text-5xl font-bold font-outfit text-white mb-16 text-center">
-        Formation<span className="text-primary">.</span>
-      </h2>
+      <FadeIn>
+        <h2 className="text-4xl md:text-5xl font-bold font-outfit text-white mb-16 text-center">
+          Formation<span className="text-primary">.</span>
+        </h2>
+      </FadeIn>
 
       <div className="flex flex-col gap-12 w-full">
-        {formations.map((formation) => (
-          <div
-            key={formation.id}
-            className="flex flex-col md:flex-row gap-4 md:gap-12 w-full group cursor-default"
-          >
-            {/* Date */}
-            <div className="md:w-1/4 shrink-0 pt-1">
-              <span className="text-primary font-mono text-sm">
-                {formation.date}
-              </span>
-            </div>
+        {formations.map((formation, i) => (
+          <FadeIn key={formation.id} delay={i * 0.1}>
+            <div className="flex flex-col md:flex-row gap-4 md:gap-12 w-full group cursor-default">
+              {/* Date */}
+              <div className="md:w-1/4 shrink-0 pt-1">
+                <span className="text-primary font-mono text-sm">
+                  {formation.date}
+                </span>
+              </div>
 
-            {/* Content */}
-            <div className="md:w-3/4 flex flex-col gap-2">
-              <h3 className="text-white font-bold text-xl flex items-center gap-2 group-hover:text-primary transition-colors">
-                {formation.title}
-                <FiArrowUpRight className="text-primary opacity-70" />
-              </h3>
-              <p className="text-slate-400 text-sm font-medium leading-relaxed">
-                {formation.description}
-              </p>
+              {/* Content */}
+              <div className="md:w-3/4 flex flex-col gap-2">
+                <h3 className="text-white font-bold text-xl flex items-center gap-2 group-hover:text-primary transition-colors">
+                  {formation.title}
+                  <FiArrowUpRight className="text-primary opacity-70" />
+                </h3>
+                <p className="text-slate-400 text-sm font-medium leading-relaxed">
+                  {formation.description}
+                </p>
+              </div>
             </div>
-          </div>
+          </FadeIn>
         ))}
       </div>
     </section>

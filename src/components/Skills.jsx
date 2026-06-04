@@ -61,35 +61,41 @@ const categories = [
   },
 ];
 
+import FadeIn from "./FadeIn";
+
 export function Skills() {
   return (
     <section
       id="skills"
       className="w-full max-w-4xl mx-auto px-8 py-24 flex flex-col items-center"
     >
-      <h2 className="text-4xl md:text-5xl font-bold font-outfit text-white mb-16 text-center">
-        Skills<span className="text-primary">.</span>
-      </h2>
+      <FadeIn>
+        <h2 className="text-4xl md:text-5xl font-bold font-outfit text-white mb-16 text-center">
+          Skills<span className="text-primary">.</span>
+        </h2>
+      </FadeIn>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-10 w-full">
-        {categories.map((category) => (
-          <div key={category.title}>
-            <h3 className="text-white font-bold text-lg mb-4 font-outfit">
-              <span className="text-primary">&lt;</span>{category.title}
-              <span className="text-primary">/&gt;</span>
-            </h3>
-            <div className="flex flex-wrap gap-3">
-              {category.skills.map((skill) => (
-                <div
-                  key={skill.name}
-                  className="flex items-center gap-2 bg-slate-800 px-4 py-2 rounded-md text-slate-300 text-sm"
-                >
-                  <span className="text-primary">{skill.icon}</span>
-                  <span className="text-sm">{skill.name}</span>
-                </div>
-              ))}
+        {categories.map((category, i) => (
+          <FadeIn key={category.title} delay={i * 0.08}>
+            <div>
+              <h3 className="text-white font-bold text-lg mb-4 font-outfit">
+                <span className="text-primary">&lt;</span>{category.title}
+                <span className="text-primary">/&gt;</span>
+              </h3>
+              <div className="flex flex-wrap gap-3">
+                {category.skills.map((skill) => (
+                  <div
+                    key={skill.name}
+                    className="flex items-center gap-2 bg-slate-800 px-4 py-2 rounded-md text-slate-300 text-sm"
+                  >
+                    <span className="text-primary">{skill.icon}</span>
+                    <span className="text-sm">{skill.name}</span>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
+          </FadeIn>
         ))}
       </div>
     </section>

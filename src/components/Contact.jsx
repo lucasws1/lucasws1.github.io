@@ -4,6 +4,7 @@ import {
   FiInstagram,
   FiLinkedin,
 } from "react-icons/fi";
+import FadeIn from "./FadeIn";
 
 const links = [
   {
@@ -21,11 +22,6 @@ const links = [
     icon: <FiGithub className="text-xl" />,
     url: "https://github.com/lucasws1",
   },
-  // {
-  //   name: "E-mail",
-  //   icon: <FiMail className="text-xl" />,
-  //   url: "#",
-  // },
 ];
 
 export function Contact() {
@@ -36,28 +32,31 @@ export function Contact() {
       id="contact"
       className="w-full max-w-4xl mx-auto px-8 pt-24 pb-12 flex flex-col items-center"
     >
-      <h2 className="text-4xl md:text-5xl font-bold font-outfit text-white mb-4 text-center">
-        Contact<span className="text-primary">.</span>
-      </h2>
-      <p className="text-slate-400 mb-12 text-center text-sm md:text-base">
-        Entre em contato comigo
-      </p>
+      <FadeIn>
+        <h2 className="text-4xl md:text-5xl font-bold font-outfit text-white mb-4 text-center">
+          Contact<span className="text-primary">.</span>
+        </h2>
+        <p className="text-slate-400 mb-12 text-center text-sm md:text-base">
+          Entre em contato comigo
+        </p>
+      </FadeIn>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-2xl mb-24">
-        {links.map((link) => (
-          <a
-            key={link.name}
-            href={link.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-between p-4 border border-slate-800 rounded bg-[#161a20] hover:border-primary/50 hover:bg-slate-800/50 transition-all group"
-          >
-            <div className="flex items-center gap-4 text-slate-300 group-hover:text-white transition-colors">
-              {link.icon}
-              <span className="font-medium text-sm">{link.name}</span>
-            </div>
-            <FiArrowUpRight className="text-primary opacity-70 group-hover:opacity-100 transition-opacity" />
-          </a>
+        {links.map((link, i) => (
+          <FadeIn key={link.name} delay={i * 0.1}>
+            <a
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-between p-4 border border-slate-800 rounded bg-[#161a20] hover:border-primary/50 hover:bg-slate-800/50 transition-all group"
+            >
+              <div className="flex items-center gap-4 text-slate-300 group-hover:text-white transition-colors">
+                {link.icon}
+                <span className="font-medium text-sm">{link.name}</span>
+              </div>
+              <FiArrowUpRight className="text-primary opacity-70 group-hover:opacity-100 transition-opacity" />
+            </a>
+          </FadeIn>
         ))}
       </div>
 

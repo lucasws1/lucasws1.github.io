@@ -1,5 +1,6 @@
 import { FaGithub } from "react-icons/fa";
 import { FiExternalLink } from "react-icons/fi";
+import FadeIn from "./FadeIn";
 
 const projects = [
   {
@@ -89,13 +90,17 @@ function ProjectCard({ title, description, tech, github, demo, live }) {
 export default function Projects() {
   return (
     <section id="projects" className="w-full max-w-5xl mx-auto px-8 py-24">
-      <h2 className="text-4xl md:text-5xl font-bold text-white mb-12 text-center">
-        Projects<span className="text-primary">.</span>
-      </h2>
+      <FadeIn>
+        <h2 className="text-4xl md:text-5xl font-bold text-white mb-12 text-center">
+          Projects<span className="text-primary">.</span>
+        </h2>
+      </FadeIn>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-        {projects.map((p) => (
-          <ProjectCard key={p.title} {...p} />
+        {projects.map((p, i) => (
+          <FadeIn key={p.title} delay={i * 0.1}>
+            <ProjectCard {...p} />
+          </FadeIn>
         ))}
       </div>
     </section>
