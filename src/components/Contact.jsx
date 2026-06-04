@@ -1,9 +1,8 @@
 import {
-  FiLinkedin,
+  FiArrowUpRight,
   FiGithub,
   FiInstagram,
-  FiMail,
-  FiArrowUpRight,
+  FiLinkedin,
 } from "react-icons/fi";
 
 const links = [
@@ -41,7 +40,7 @@ export function Contact() {
         Contact<span className="text-primary">.</span>
       </h2>
       <p className="text-slate-400 mb-12 text-center text-sm md:text-base">
-        Contact me or follow my social media
+        Entre em contato comigo
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-2xl mb-24">

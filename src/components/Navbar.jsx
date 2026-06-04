@@ -32,11 +32,11 @@ export function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-dark/80 backdrop-blur-md">
       <div className="w-full flex items-center justify-between py-5 px-8 max-w-7xl mx-auto">
-        <div className="text-2xl font-bold font-outfit text-white tracking-tight">
+        <div className="hidden md:flex text-2xl font-bold font-outfit text-white tracking-tight">
           <span className="text-primary">&lt;</span>Lucas Schuch
           <span className="text-primary">/&gt;</span>
         </div>
-        <ul className="hidden md:flex items-center gap-8 text-lg font-medium text-slate-400">
+        <ul className="flex items-center gap-8 text-lg font-medium text-slate-400">
           {links.map(({ label, id }) => {
             const isActive = active === id;
             return (
