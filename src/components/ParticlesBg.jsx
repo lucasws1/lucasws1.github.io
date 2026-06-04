@@ -11,7 +11,7 @@ const particleOptions = {
   fpsLimit: 60,
   interactivity: {
     events: { onHover: { enable: true, mode: "grab" } },
-    modes: { grab: { distance: 120, links: { opacity: 0.5 } } },
+    modes: { grab: { distance: 120, links: { opacity: 0.9 } } },
   },
   particles: {
     color: { value: "#34d399" },
@@ -19,13 +19,13 @@ const particleOptions = {
       color: "#34d399",
       distance: 100,
       enable: true,
-      opacity: 0.5,
-      width: 1,
+      opacity: 0.7,
+      width: 1.5,
     },
     move: { enable: true, speed: 0.5, outModes: { default: "bounce" } },
     number: { value: 55, density: { enable: true } },
-    opacity: { value: 0.5 },
-    size: { value: { min: 1, max: 2.5 } },
+    opacity: { value: 0.8 },
+    size: { value: { min: 1.5, max: 3.5 } },
   },
   detectRetina: true,
 };
